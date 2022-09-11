@@ -17,11 +17,12 @@ LOCAL_HOST_IP?=$(shell $(IP_CMD) | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' |
 
 .PHONY: clean
 clean:
-	rm -rf $(CURDIR)/artifacts
-	rm -rf $(CURDIR)/build
-	rm -rf $(CURDIR)/external/config/**/traceability/code.tar.gz
-	rm -rf $(CURDIR)/organizations
-	$(SCRIPT_DIR)/clean.sh
+#	rm -rf $(CURDIR)/artifacts
+#	rm -rf $(CURDIR)/build
+#	rm -rf $(CURDIR)/external/config/**/traceability/code.tar.gz
+#	rm -rf $(CURDIR)/organizations
+#	$(SCRIPT_DIR)/clean.sh
+	docker-compose -f ../fabric-clean-compose.yaml up -d
 
 .PHONY: configtx
 configtx:

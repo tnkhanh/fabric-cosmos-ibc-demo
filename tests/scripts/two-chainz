@@ -17,7 +17,8 @@ RLY="${RLY_BINARY} --debug"
 FIXTURES_DIR=${CURDIR}/../fixtures
 
 # Setup fixtures for fabric chain
-${CURDIR}/prepare-fixtures
+# ${CURDIR}/prepare-fixtures
+docker-compose -f prepare-fixtures-compose.yaml up -d
 
 echo "Generating ${RLY_BINARY} configurations..."
 

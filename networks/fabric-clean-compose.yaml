@@ -1,0 +1,12 @@
+version: '3.5'
+
+services:
+  deleter:
+    build:
+      context: .
+      dockerfile: fabric-clean.dockerfile
+    image: alpine
+    container_name: deleter
+    working_dir: /etc/fabric
+    volumes:
+      - ./fabric:/etc/fabric

@@ -10,5 +10,6 @@ down:
 
 .PHONY: clean
 clean:
-	rm -rf $(CURDIR)/fixtures/data
+#	rm -rf $(CURDIR)/fixtures/data
+	docker-compose -f clean-fixtures-compose.yaml up -d
 

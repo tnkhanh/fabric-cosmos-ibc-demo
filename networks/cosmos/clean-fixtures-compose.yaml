@@ -1,0 +1,12 @@
+version: '3.5'
+
+services:
+  fixture.deleter:
+    build:
+      context: .
+      dockerfile: clean-fixtures.dockerfile
+    image: alpine
+    container_name: fixture.deleter
+    working_dir: /etc/cosmos
+    volumes:
+      - .:/etc/cosmos
