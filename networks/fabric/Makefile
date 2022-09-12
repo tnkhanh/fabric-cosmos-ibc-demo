@@ -21,8 +21,8 @@ clean:
 #	rm -rf $(CURDIR)/build
 #	rm -rf $(CURDIR)/external/config/**/traceability/code.tar.gz
 #	rm -rf $(CURDIR)/organizations
-#	$(SCRIPT_DIR)/clean.sh
 	docker-compose -f ../fabric-clean-compose.yaml up -d
+	$(SCRIPT_DIR)/clean.sh
 
 .PHONY: configtx
 configtx:

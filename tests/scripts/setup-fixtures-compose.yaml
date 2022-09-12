@@ -1,12 +1,12 @@
 version: '3.5'
 
 services:
-  fixture.deleter:
+  fixture.setup:
     build:
       context: .
-      dockerfile: prepare-fixtures.dockerfile
+      dockerfile: setup-fixtures.dockerfile
     image: alpine
-    container_name: fixture.deleter
+    container_name: fixture.setup
     working_dir: /etc/demo/tests/scripts
     volumes:
       - ../..:/etc/demo
